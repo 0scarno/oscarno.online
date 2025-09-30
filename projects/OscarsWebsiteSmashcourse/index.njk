@@ -1,0 +1,283 @@
+---
+title: Oscar's Website Smashcourse
+layout: post
+desc: An overly wordy guide to making your own website for cheap
+date: 2025-09-12
+draft: false
+tags: post
+---
+## What is this?
+
+A *smashcourse* is like a crashcourse but obviously __better__.
+
+This is a quick and dirty way to get a static site up and running so you can have some legit web presence happening. It's focussed on giving you a good understanding of why you have to go thorugh all this junk to get a website up, so you can keep it maintained on your own. Oscar is by no means a web professional but he likes to do things for cheap without being beholden to large, evil companies. (note: some of the methods below are currently beholden to GitHub 👀. Maybe that will change one day.) If you would prefer to just get a one stop shop solution like [Squarespace](https://www.squarespace.com/), [carrd](http://carrd.io/), or [omg.lol](https://omg.lol) go ahead! It'll be pretty quick to get going, but probably expensive and fiddly to keep up to date. (I also like the look of [Neocities](https://neocities.org/) but have never used it, so if you rate it, lmk)
+
+## Structure
+This smashcourse is divided into 4 sections:
+
+  1. 🐸 Anatomy of basic websites
+  2. 🔑 Domains, Hosting, email
+  3. 📝 Static Site Generators & Markdown. Creating your Site.
+  4. 🔧 Source control, updating your website
+
+The idea is that by the end, you will have a **decent understanding of how websites work** (& why most of them suck), and **how to create one** (that doesn't suck) with the ability to **update and change it however you like**. You can skip section 1 if you dare, but it exists to give context to the annoying stuff we have to do in section 3, so I reccommend sticking with it.
+
+Storefronts, apps and other stuff like that will not be covered, cause idk how to do any of that and like at that point just go to uni and get a degree or smth.
+
+## 1. 🐸 Anatomy of basic websites
+One of the best explainations for web based stuff I've heard is as follows:
+
+> There are only two computers, your computer, and somebody else's. If a file isn't on your computer, it's on somebody else's. (I don't know where I read this but it's sage wisdom to be sure)
+
+When you're accessing a website, you're loading a heap of files from somebody else's computer (or server - a computer made specifically to "serve" data to people), and then you're browser does the job of doing what those files tell it, in order to show you a cool webpage. Pretty much the same as how a videogame works. A lot of early website design was built around the idea of migrating from print (like magazines) to web, and so the architecture was made for that, but as we all know, websites can do a lot more than be a book with moving images. 
+
+### 🔪 Exercise: Webpage Disection
+1. Head to [this website](https://www.spacejam.com/1996/jam.html)
+2. Right click the page and hit "Save Page As..." 
+3. Make sure to select "All Files" in the dialogue box
+4. Play around what you have downloaded! 
+
+What happens when you:
+- Open the .html file in your browser? is the web address (url) the same?
+- Click one of the links to other pages when opening the website locally?
+- Move the .html file to a folder away from 📁Space Jam_files and open it?
+- Open Space Jam.html in a text editor?
+
+Lots of people spend a lot of time learning and working hard to create nice websites for people to use. (The Space Jam sitemap page mentions this [right at the bottom](https://www.spacejam.com/1996/cmp/sitemap.html), even if it is a little grim). We don't really have that much time cause we have other shit to do, (the kind of shit we want to show off on our website) so we're not going to worry too much about making any web pages from scratch. 
+
+Next we're going to look at how it is you can access other websites, and make it so other cool people can find yours! 
+
+If you want to get ahead of the ball, you are welcome to look into domain name providers. Personally, I learned about [Dreamhost](https://www.dreamhost.com/) when I was interested in making my first website, and they haven't wronged me yet. If you have a domain (the address of your website) in mind, feel free to buy it before the next section, it shouldn't cost you more than ~$20 USD if memory serves (Be sure to check the recurring fee, the first year is always a bit cheaper). If you're not fussed about domains, we're going to be using GitHub to host the website files, so it will have a default url based on your GitHub account. 
+
+**TO GET YOUR WEBSITE WORKING YOU WILL ONLY NEED TO PURCHASE A DOMAIN, PLEASE DO *NOT* BUY ANY HOSTING SERVICES AT THIS STAGE** (or do what you want I'm not your boss lol)
+
+## 2. 🔑 Domains, Hosting, Email
+### 🔗 What is a domain?
+\* _immediately searches "what is a domain"_ \*
+
+A domain is just a unique name that allows people to find your website. When they type this into their browser, it will check the domain registry (kinda like a phone book) and then use that to route itself to the computer (or server) where the website files are stored. (To my knowledge, behind the scenes the browser is actually accessing an IP address, which is why you can access your local network's router by typing a bunch of numbers into your browser - Again, I don't really know how the hell internet works but it makes sense in my head).
+  
+When we purchase a domain name, we're asking the people who provide the service to safely register that domain so we can be in charge of what is shown when someone types, for example, [bigkahuna.com](https://bigkahuna.com/) into their browser. Feel free to look for domain name providers, and pick one you like the look of. As mentioned before, I use [Dreamhost](https://www.dreamhost.com/).
+  
+### 📦 What about hosting?
+Web hosting is putting your files on somebody else's computer. It makes sense, cause you wouldn't want randos to have access to files on your own personal computer, that would be messed up. You could set up your own server, a computer just for website files, that's definitly safer, but then you have to keep that on 24/7 or people wouldn't be able to see your site, and it's also on your own home or work network (scary). Luckily, capitalism exists and we can pay someone else to have a server and rent space to us like the [feeble peasants](https://www.abc.net.au/news/2023-11-05/what-is-technofeudalism-and-are-we-living-under-it/103062936) we are. Don't be too hasty though, as server space is so plentiful, the corpos are basically giving it away! (As long as your files are small hehe).
+
+That's why for this smashcourse we are going to use **GitHub Pages**. This is a standard feature as a part of any GitHub plan (including free) and allows us to host our website files on GitHub and point a custom domain to the page made by those files. Hooray! The only downside if you're on a free GitHub plan is that your repo will be public, but that's not a huge deal. Just don't type your credit card details into your website's code please for the love of god.
+  
+So now's the time, if you haven't already, go ahead and buy a domain name registration and get ready to make your website! You should be able to do this for under $20 USD (note: There are fun extentions other than .com like .zip, .cool, .online, .game etc. but they can be pricey) We're going to start the next section by setting up the webpages on our own computer, then we'll upload those files to github so the whole web can see it ^_^
+
+### 📧 Wait you haven't talked about email yet!
+oh yeah! As a part of most web services, you can also get a custom email address that matches your website so you can look all cool and official (and not tied to any big evil companies). This will cost more, cause the provider will be holding the emails on their servers (i'm not going to go into how email works...mainly because I don't know). There are other way around this like email routing or other stuff, but from my research, paying for your own email address is usually worth it, and keeps things simple.
+
+Nice work, you've done the most daunting thing by carving a space for yourself on the net. In the next section, we're going to be looking at getting the engine running that make the pages associated with your site. I reccommend taking a look at the list below and seeing which is the easiest to understand. Chances are, the one you like will be the easiest to work with. 
+
+# 3. 📝 Static Site Generators & Markdown. Creating your site.
+
+OK, so you've spent money on a domain and maybe email. Awesome. Let's try typing that into our browser right now. Maybe a webpage has magically appeared there and we won't have to do any work?? If everything is normal, your web browser probably doesn't know what to do and told you there's an issue. That's good! that means things are working as they should. If by some miracle you have a fully functional website there already, please contact me at your earliest convinience, as you may have some kind of supernatural ability. 
+
+Alright so what we need to do is generate some kind of site. Preferably a static one. Hmmm...Aha! A Static Site Generator. Genius! The kind of site we're going to be making doesn't have any fancy bells and whistles. No databases, user logins, webapps, or whatever. Maybe we'll embed something every once in a while, but that will work easily. This is usually refered to as a site with "static html". It doesn't dynamically update, and will only change when we, the owner of the website tell it to. 
+
+There are a handful of static site generators out there, some people even make their own, but again we're not in the business of building things from the ground up. Here's a list of reputable SSGs I've found, all with their own stupid tech startup names:
+
+- [Eleventy](https://www.11ty.dev/)
+- [Hugo](https://gohugo.io/)
+- [Jekyll](https://jekyllrb.com/)
+- [Zola](https://www.getzola.org/)
+
+The descriptions of these all use random jargon that I'm sure many web nerds will tell you is the best version of whatever it does, but literally none of that matters. What *does* matter is how it can make your website look cool quickly, so once you've given a look at the home pages of each of these, make sure to look at the available **themes**! You should just be able to search "[service] themes" (e.g eleventy themes) and get a decent overview pretty quick. 
+
+If you find one you like, then go with that service. For more inspiration I would recommend checking out sites of people you look up to, or people you think are stylish. See what people are doing in your scene, and ask if they have any pointers. If you're looking to do this for free, make sure your fave theme doesn't cost any money. If you got some change leftover from buying your domain, feel free to chuck it towards a design you enjoy and will use :) 
+
+When we use a theme, we're basically going to be copying that whole site down to our computer, so take note of the things you want to change or get rid of. Making changes to anything other than text or image content (layout, colours, sizes, etc) will require some html fiddling. Usually this isn't too tricky, but can eat up a bit of time if it's something you haven't done before.
+
+I'm probably going to be using Eleventy for the purposes of this tutorial so here are some themes that you might want to use if you're following along that way:
+
+- [Halide](https://github.com/danurbanowicz/halide): Grid based portfolio site. (I'm using this one)
+- [Photo Gallery](https://www.11tythemes.com/theme/tannerdolby-eleventy-photo-gallery/): Good for images or art portfolios
+- [Vredeburg](https://www.11tythemes.com/theme/daflh-vredeburg/) for blogs with header images
+- [Basic Pattern Repository](https://www.11tythemes.com/theme/nachtfunke-basic-pattern-repository/) cool grid style
+- [Neat Starter](https://www.11tythemes.com/theme/surjithctly-neat-starter/) for the clean modernists
+- [Eleventy Excellent](https://www.11tythemes.com/theme/madrilene-eleventy-excellent/) a good all round choice.
+
+Found a theme? great. Might be good to look for a backup too, cause sometimes these go out of date and don't work as they should :(
+
+---
+
+## Some tips for making this easier
+
+So far, I've had the luxury of sitting back in my chair and saying, "_choose whatever is right for you, make your own deicisions_" but we're about to get to the point where I'm going to give you specific things to type & click, and they will seem weird. I'm going to try to be as specific as possible, and make things as clear as I can. 
+
+Unfortunately, this process will take longer than you would like, and I'm going to try to explain it all so that you can fix things on your own when (not if) they break. People get payed good money to do exactly what you're about to do, so make sure you give yourself luxury treatment while you do this. Take breaks, get coffee, have someone dangle grapes as you lounge (maybe not the last one). 
+
+It's also important to keep in the front of your mind that you're creating your own corner of the web here. Keep the vision for your website in the front of your mind, and imagine people visiting the page and just having the best time and thinking you're so cool and wanting to be your friend. When you get through all of this, I can guarantee that will happen. 
+
+One last tip, **do this with a friend!** It's going to be so much easier to work through this stuff with someone at your side trying to do the same thing you are. Being able to share the knowledge you have with another person is one of the fundamental pleasures of existing as a human. Figuring stuff out together will always be easier than on your own.
+
+> In the following sections I've kind of doubled up on the info. Each section will start with a list, and then the explainations will follow. This is for clarity, however, there is important info in the descriptions so be sure to read the whole section before going ahead with the steps.
+
+## Getting our computer ready to use the static site generator.
+
+1. If you haven't already, [ Download git](https://git-scm.com/downloads) and make a [Github](https://github.com/) account
+2. Download dependencies like [Node.js](https://nodejs.org/en/download/) or [Go](https://go.dev/dl/)
+3. Download a text editor, like [VS Code](https://code.visualstudio.com/)
+
+If you've never used GitHub or any source control service before, be sure to install [git](https://git-scm.com/downloads). This allows us to safely change and update files without fear of losing previous work, and makes updating the site super easy. You should also make a GitHub account.
+
+Because we're using Eleventy, we have to install [Node.js](https://nodejs.org/en/download/). This is the engine that gets Eleventy moving. If you're using Hugo, you'll need [Go](https://go.dev/dl/) and probably some other stuff. Be sure to check your generator's "Getting Started" page to get all the details ironed out. Once you've done all of that, head on to the next step here.
+
+## Prepping our local site directory
+
+1. Create a folder for your site files to live in
+2. Open that folder in VS Code (or your text editor of choice)
+3. Open the terminal
+4. Clone the repo for your selected theme
+
+We will need a place to chuck the files that are going to make up our site. Make a folder in an easily accessible place on your computer and name it something sensible. Usually the name of the site or domain you got is good.
+
+Once that's done, open up [VS Code](https://code.visualstudio.com/) or whatever text editor you like. Then, we're going to open the folder we just made in that program. To do this in VS Code, go to File > Open Folder > choose the folder you just made. Now, at the top of the Explorer pane on the left of VS Code, you should see the name of that folder listed. (If you can't see the explorer pane, try clicking the icon of two pages near the top left of the window).
+
+Okay sick, so we've made a place for the files to live, and VS Code knows that's where we will be doing stuff. Now we're going to open up the terminal. In VS Code, you can open it by clicking the rectangle in the top right with the bottom half shaded (should be second from the end). 
+
+To find the stuff to type in here, we're going to go to the [halide repo](https://github.com/danurbanowicz/halide) and look at the section titled "Local Development". 
+
+1. We've already done step one. hell yeah.
+2. type `git clone https://github.com/danurbanowicz/halide.git` into the terminal. This will copy the files from the repo right into the folder we're working in with VS Code.
+3. Step 3 tells us to type `npm install`, but you might run into issues because the last command just made a new folder with the stuff npm install needs. To fix it this, type `cd halide`, which should move us to the new folder, then try `npm install` again. If you're still running into trouble, phone a friend. 
+4. You will probably get a notification once this is done that there are potential vulnerabilities in the packages. It's good to do what the terminal tells you here, and run `npm audit fix` to update any old libraries. Ideally we'd be sitting at 0 vulnerabilities, but it's not that big of a deal if there are a few. We won't store any sensitive info in our site, and I don't believe there's risk of huge hosting charges, because we're using GitHub Pages.  
+5. Next it's telling us we can set up Tina CMS. I haven't used this before, but apparently it lets you edit the site by clicking on it directly. If that sounds good to you, go ahead and set that up, but I'm not interested lol so I'm going to skip to the section titled "Using Halide without Tina CMS" for the next part.
+
+## Taking a look at your local site
+
+1. Use `npx eleventy --serve` to view your local site in the browser
+2. Edit the `settings.yaml` file and see the changes
+3. Play around with changing other stuff
+
+You should see a big list of files in the VS Code Explorer pane now. Some folders including "\_data", "\_includes", "assets", "projects" among others. These are all the files for the site, and we can actually check it out right now. So in terminal, type `npx eleventy --serve`. This makes the site viewable in our browser by typing in `localhost:8080/`. (The terminal should tell you what to type in to see the site if the number is different).
+
+Hell yeah there it is. We've copied the site template locally and we can see it in the browser. The extra neat part is that we can make changes and see them update in real time. So let's head to the `_data` folder and open the `settings.yaml` file. You should see a bunch of fields you can change to make the site yours. `site_title`, and the subtitles are good places to start. 
+
+See how much you can change here, and what you can't. If you're using a theme different to _halide_, it will probably have a different way to edit all this stuff. Check the theme's repo or documentation for pointers on this, hopefully it's easy to follow. If you need to ask for help, please do so. (Once you're done with live editing the site, head back to the VS Code terminal and hit `Ctrl+C` to stop the process).
+
+YO NICE WORK YOU GOT A LOCAL WEBSITE WORKING!! Take a lil break at this point and have a snack or something. Next up we're going to make the website have your stuff in it. (and hey, you've probably already started doing that. p sick if you ask me)
+
+## Markdown
+
+In the next section, we're going to be looking at the files in the "project" folder. Each of these are a markdown file, as show by their `.md` extention. Markdown is a way to quickly tell a computer that text is for different things, like a heading, code snippet or bulleted list. The stuff at the top, between the dashes is called "frontmatter" and is what the site generator looks at first, to get everything lined up. Then, for the main text, it looks at the stuff underneath and transmutes it from markdown into html for a browser to parse. Markdown is easy to grasp and use, and you can use it almost everywhere, even discord messages lol. Using a [markdown syntax guide](https://www.markdownguide.org/cheat-sheet/) can help to get you started.
+
+>This very smashcourse is written in markdown :)
+
+## Putting your projects on your website.
+
+1. Edit the files in the "project" folder
+2. Put some of your own pictures in the  `assets/uploads` folder, and link them in the project files
+3. You're most of the way there!
+
+This particular theme is built around the files found in the "projects" folder. Each of these markdown (.md) files creates a page that is shown in the grid on the front page. Go ahead and open one of these project files, and edit some stuff. See what you can get rocking. If you want some more clarity, you can delete or move the other project files so you can focus on just this one. 
+
+You've probably noticed that every project has a list of pictures that are associated with it. They're all stored in `/assets/uploads/`, so be sure to add some of your own, and link them in the project files so you can see what the site looks like with your stuff!! As a note, this template does some funky image processing when it builds the site. It actually creates a few different versions of each picture so an appropriate size can be displayed and keep the site quick. You can actually see all of these in `_site/assets/images`. So if you're going to go into the raw html to do some hacker stuff, just keep this in mind, and good luck.
+
+Once you've updated the info, and copied the project files a few times to make new ones, you've basically got your site ready to go! This is all you'll have to do in the future to add new projects. Create a new markdown file, add some images and link them, and you're done! The only step we have left is to get this thing online for everyone to see.
+
+# 4. 🔧 Source control, getting your site online.
+
+Alright, you've done a lot so far, and you have a sick site that you made! The next step is to get it on the world wide web so people can access it wherever, whenever. As mentioned before, we're going to use github pages, which is something we can toggle from the repo page in github. Unfortunately, to get github pages and eleventy to play nice, we have to do a bit of wrangling, bouncing back and forth between our github tab and text editor. Like pretty much everything else here though, it's a one time set up, and then it's done. After this step, your site will be live for everyone to see!
+
+## Github setup
+1. add a `.nojekyll` file to the root folder of your site
+2. Initialise your github repo
+3. Copy your site files into the repo and commit
+
+Add a `.nojekyll` file to the folder. We can do this by typing `touch .nojekyll` into the terminal. This stops GitHub using it's default generator Jekyll.
+
+Next we're going to initialise our github repo for the site. If you are familiar with this stuff, go ahead and do it, we'll see you in the next step. If not, I've found the most beginner friendly way to do this is through the [Github Desktop app](https://desktop.github.com/download/). In Github Desktop, go File > New Repository (Keep an eye out for the folder structure here. You'll need an empty folder, so make a new one near your website files, and we'll move them in there shortly). Make a commit with a README.md or something. If it shows up in your github account, you're g2g.
+
+Once your repo is rocking, you can move all the files for the site into that folder you've made, so they can be uploaded to github. (You shouldn't need LFS for this. if it asks for it, something is wrong. Just make sure you grabbed all the files and try to commit again.)
+
+## robots.txt
+robots.txt is a file that most reputable webcrawlers will respect when indexing your website. This means you can tell the AI morons to bugger off. All we need to do is create a robots.txt in the root folder of our site (docs folder for us). There are heaps of generators for this so have a search around and [find one you like](https://www.generaterobotstxt.com/), and chuck it in the docs folder.
+
+## Prepping our site for github pages
+
+1. Edit the `.eleventy.js` file
+2. `npx @11ty/eleventy`
+3. if step 2 doesn't work, change the "\_site" folder to "docs"
+
+The way our site is built, we have the main folder with all the working files, and the a "\_site" folder with the stuff the browser actually looks at. Github pages is set up in a similar way to this, but it needs that second folder to be named "docs". We have to edit a config file to make sure eleventy builds this same way. The file in question is `.eleventy.js`, which you should be able to spot in VS Code. 
+
+Any time "\_site" is used, make it "docs" instead. This will apply no matter what SSG or theme you have chosen. Line numbers will be specific to the _halide_ theme.
+
+At line 30:
+```diff
+            widths: [48,192,512],
+            formats: ["png"],
+      urlPath: "/",
+-      outputDir: "./_site/",
++      outputDir: "./docs/",
+      filenameFormat: function (id, src, width, format, options) {
+            const name = "favicon";
+        return `${name}-${width}.${format}`;
+```
+
+At line 71:
+```diff
+      sharpAvifOptions: { quality: outputQualityAvif },
+      formats: outputFormats,
+      urlPath: "/assets/images/",
+-      outputDir: "./_site/assets/images/",
++      outputDir: "./docs/assets/images/",
+```
+
+Not much here, but these are super important to make things talk to eachother properly. Run `npx @11ty/eleventy` to build the site. If the "docs" folder springs into existence, it worked. Things get a bit weird here, as once your github pages is working, the site itself won't work properly until the custom domain is hooked up. If you're trying something different from this, I found [this guide on Dawid's Blog](https://www.dawidsblog.com/posts/tutorial_11ty_github_pages/) to be very helpful, and it will probably help you too.
+
+## Turning on Github Pages
+Now, head to your browser, and open your github repo page. Head to the Settings panel, and look for the section labelled "Pages". Here's what we're going to select:
+
+- **Source**: Deploy from branch
+- **Branch**: Main, /docs
+- **Custom** Domain: leave this alone for now, we'll get to it, I promise. 
+
+Save that, and in a few minutes, you should se a deployment on the main page of your repo. Head to that link and your site should work. fuck yeah. Any changes you make, you can commit through vs code or github desktop, and will automatically deploy shortly after. Now let's hook up our domain and finish this off.
+
+## Linking your custom domain
+
+1. Type your domain into the custom domain field in github pages. Get an error.
+2. Add a DNS record to your domain registration
+3. wait a while for checks to go through
+4. YOU'RE DONE
+
+Go ahead and type your domain into the Custom Domain field we saw earlier. You'll get a big red exclaimation mark saying something about things not being configured. This is good. it means not anyone can just type a website in and have their github pages show up there. In order for this to work, we have to tell our domain provider that this is something we are intending to do. 
+
+Head to your domain provider, and find your domain registration settings. For me it was under "sites". We're going to create a custom domain record that will point to our github pages site. 
+- Type: choose "Alias"
+- Host: just type "@" before ".yourdomain.com"
+- Points to: YourGithubUsername.github.io
+
+This stuff takes a while to propigate across the entire globe, but you should be able to head back to your github settings, tell them to check the DNS again, and the error should look less...wrong. The official documentation on [configuring DNS records](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain) and also [apex & subdomains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain-and-the-www-subdomain-variant) will probably be helpful.
+
+If all goes smoothly, your site should be viewable at your custom domain! I would also recommend enabling the https thing underneath as well. Safer that way. 
+
+NICE WORK!
+
+# 5. ✨ Recap & Bonus
+
+Congratulations! You made a website on your own! Hopefully this guide saved you either a lot of time or a lot of money, and gave you some knowlege and autonomy over your presence on the web. Here's a quick recap of the steps you would need to take to make changes to your site.
+
+1. Add a new project by adding images to the "assets/uploads" folder, and a new markdown file in the "projects" folder. (Or whatever your theme requires you to do)
+2. Check everything is working by using `npx eleventy --serve` and opening the localhost link in your browser.
+3. `npx @11ty/eleventy` to build the site into the docs folder
+4. Commit the changes using VS Code or GitHub Desktop or whatever git program you like. 
+5. Your site should deploy in a few minutes :) EASY!
+
+One of the things I've really liked about having a website is being able to make specific pages for people, like job specific portfolios or whatever. So here's a bonus to get something like that happening. 
+
+## Bonus: Making direct link pages
+This requires a few steps as we're working with a site generator. What we're aiming to do is create a new .html file within the docs folder. This one won't be labelled index.html, but will have a unique name that you would like. This will mean people can visit the page by typing "thatcoolwebsite.com/specialpage" or whaetever. You can actually see an example of this already with the 404.html page.
+
+Go ahead and copy the 404 page and change some of the front matter. Then change some of the body too. You can then `npx eleventy --serve` to check on your page. Once you can see the locally hosted site, just add "/specialpage/" (or whatever you put in the permailink part of the frontmatter) and you should be able to see your special page! Build and commit it to your repo and you're rocking and rolling!
+
+Experiment with stuff! It's easy to test stuff locally, and if it breaks on the web, you can always roll back your repo to when it worked as it should.
+
+HAPPY INTERNETTING!
+
+---
+If you want to learn more about making your own webpages from scratch, there are a bajillion tutorials out there. [Internetting is Hard](https://webdesign.solomon.ng/) was the one I came across, and it does a pretty good job of explaining how to make your own webpage from the ground up. 

@@ -1,0 +1,19 @@
+---
+title: project template
+layout: project
+desc: project description
+draft: true
+eleventyExcludeFromCollections: template
+---
+long description of the project
+
+<ul class="embedded blog-posts">
+<h3>log</h3>
+    {%- for post in collections.template -%}
+        <li>
+            <span>{{ post.date | postDate }}</span>
+            <a href="{{post.url}}">{{ post.data.title }}</a>
+            <p>{{ post.data.desc }}</p>
+        </li>
+    {%- endfor -%}
+</ul>
