@@ -1,0 +1,28 @@
+---
+title: MIGW (& SXSW) 2025
+desc: "Biggest games event season yet!"
+---
+Melbourne International Games Week is always a really fulfilling event. I've been able to attend since 2023, which makes this my third consecutive games week. I've loved seeing familiar faces over this time period, and the potential of seeing them again next time is a strong motivator. This year was bigger and better than ever, with more events packed into games week, and my first time attending South By Southwest Sydney. It was a long haul, with the trip lasting 17 days, but I had a fantastic time.  
+
+## Melbourne International Games Week
+This year's MIGW was more stacked than I've ever experienced. Starting with High Score on Saturday, it was non stop through to PAX the following Friday. When I say non stop, I really do mean it, there were things on from 8am in the morning to 11pm at night pretty much every day. Barely enough time to get a decent sleep between all the goings on! This was also compounded by the fact that there were so many friends travelling down this year! Lots of fellow residency members as well as familiar faces I had met in previous years meant it was hard to peel myself away from random meal trips or walking around the city at any given time. (Pointless hangs feel like a long forgotten art, and a lot harder to organise as one gets older, but having a bunch of friends in the same city with nothing better to do was great vibes.) 
+
+Some of the new things I was able to go to this year included Freakon, Play Now and Megadev. Enjoyed getting to see these events, and while I might not be willing or able to do them all in the future, it was a great opportunity to see as much of the different sides of Games Week as I could. 
+
+Excited to continue attending Games Week in the coming years. It's always fun and a great way to celebrate my work for the year and catch up with sick games peeps.
+
+## South By Southwest Sydney
+
+I was lucky enough to get a pass to SXSW Syd this year, as Jett was showing Moonbrella in the games room, and had an extra pass! It was great to see what this event was like, though I was pretty spent after the enormous MIGW. I got a tip while in Melb to check out Constellations, a games event on the Tuesday night. It was good fun, people gave some nice talks and there were game demos to play too! 
+
+The games room itself was nice and chill, lots of game son display, and it was easy to wander around and chat to people about the sick stuff they're making. I was unfortunately run down, so I didn't have the energy to run around and chat to heaps of people, but I had a good time nonetheless.
+
+I also got to meet up with some friends in the film industry who were in town for the event! A fun side effect of the cross industry event vibes. Overall SXSW was cool! Not a life changing event by any means, but nice chill vibes, and a great place to chat to cool peeps. 
+
+## Key takeaway: Exhaustion  
+I mean this both literally and figuratively! By day 10, I was fully wiped out. I couldn't do most things without a nap first, my focus was really scattered, and I found it easiest to just sit on my phone. For the next week, I didn't really get a chance to fully recover. There were some days which were less strenuous than others, but the opportunities to just sit and recoup were few and far between.  
+I came to the realisation during this time though, that this level of exhaustion was not at all foreign to me. I was well used to my eyes being too tired to keep focus, my brain being too foggy to be creative. All social interactions were herculean efforts, and even finding food became too much of a chore to bother with. I had been living at this capacity for what seems to be most of my adult life. For some reason (and this feels silly now that I'm typing it out) I thought I just wasn't living healthy enough or something, but turns out I was constantly at my limit and not giving myself any time to recover lol.  
+I touched on this a little in [my last season recap](/journal/2025-S3), which is good, but I'm glad I was able to really see it in stark contrast over the course of these events.Right now I'm in the middle of a multiple day recovery stint. Nothing scheduled, trying to just commit to letting my mind and body recover and being in tune with it as much as possible. I think having nobody to be accountable to is very helpful for letting my mind be at ease. I'm going to try and make this practise more of a regular thing, maybe every other weekend is blocked out, or taking a week off each season. I'll make sure to find something that works best, and not let anyone encroach on this boundary. Another part of this is also being in tune with the signs when I'm feeling run down,  taking note and making sure I can take time to myself in the near future.  
+Another little thing which I was pleased to find was that just sitting down, and playing some fucking videogames was super restorative. Extremely relieving to find that this medium which is so important to me is still able to have a key role in me enjoying my life. Goodness knows these things can sometimes become corrupted or stale, but videogames are life.  
+---  
+So there you go, another games week (and more) in the books. I learned a lot about myself (lol), and got to meet and talk with a bunch of super friendly devs who are all making cool stuff. Every year feels like a big accomplishment, both in the going to the event, and also celebrating all the stuff that's been done in the year between. Thanks to everyone who was also down there for making it a wonderful place to be!
