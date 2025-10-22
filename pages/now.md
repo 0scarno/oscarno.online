@@ -2,6 +2,9 @@
 title: now
 ---
 # {{title}}
-- Prepping for Melbourne International Games Week and SXSW Sydney in the first two weeks of October.
+- Back from MGIW & SXSW Syd!
 
-- Just finished making this website :)
+- Working on a few games atm:
+    - [Dungeon Pizza](https://store.steampowered.com/app/3834910/Dungeon_Pizza/)
+    - [One More Trail](https://store.steampowered.com/app/4027330/One_More_Trail/)
+    - [Moonbrella](https://store.steampowered.com/app/3433800/Moonbrella/)
