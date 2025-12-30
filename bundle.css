@@ -14,7 +14,7 @@
     --heading-color: #eee;
     --text-color: #ddd;
     --text-color-dim: #bbb;
-    --link-color: #7C54B6;
+    --link-color: #7050B0;
     --visited-color:  #ddd;
     --code-background-color: #282828;
     --code-color: #d9d9d9;
@@ -72,6 +72,7 @@ header a.title {
 
 header a:hover {
 	color: var(--link-color)
+
 }
 
 header h1 {
@@ -93,13 +94,14 @@ nav a {
   border-radius: 3px;
   padding-left: 5px;
   padding-right: 5px;
-  background-color: DimGray;
+  background-color: #505050;
 }
 
 nav a:hover{
   background-color:var(--link-color);
   color: var(--background-color);
   text-decoration:none;
+  font-style: oblique;
 }
 
 strong, b {
@@ -125,13 +127,14 @@ main a{
   border-radius: 3px;
   padding-left: 5px;
   padding-right: 5px;
-  background-color: DimGray;
+  background-color: #505050;
 }
 
 main a:hover{
   background-color: var(--link-color);
   color: var(--background-color);
   text-decoration:none;
+  font-style: oblique;
 }
 
 table {

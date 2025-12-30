@@ -2,7 +2,7 @@
 title: now
 ---
 # {{title}}
-- Back from MGIW & SXSW Syd!
+- Finished my time in the Screen Queensland Games Residency :')
 
 - Working on a few games atm:
     - [Dungeon Pizza](https://store.steampowered.com/app/3834910/Dungeon_Pizza/)
