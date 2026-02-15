@@ -82,4 +82,4 @@ Intrestingly, a friend of mine also picked New Horizons back up recently, and I 
 
 The silver lining though, is that classic Animal Crossing doesn't seem to be a priority for Nintendo any more, and leaves a niche to be claimed by smaller game developers. I'd love to make a game in the vein of Animal Crossing one day. It would take a lot of work, but I think it could be done and  I hope there are others out there that share this passion and are willing to put the work in to make what we want to see in the world. 
 
-Thanks for reading, and I hope this gave you something to think about. All of the images are from Nookipedia. If you would like to chat more about anything feel free to reach out on bluesky :)
+Thanks for reading, and I hope this gave you something to think about. All of the images are from Nookipedia. If you would like to chat more about anything feel free to reach out on [bluesky](https://bsky.app/profile/oscarno.online/post/3mev4v34muk25) :)
