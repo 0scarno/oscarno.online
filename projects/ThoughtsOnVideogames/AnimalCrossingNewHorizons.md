@@ -1,5 +1,5 @@
 ---
-title: Animal Crossing New Horizons
+title: Revisiting Animal Crossing New Horizons
 desc: Revisiting the series' most popular entry.
 layout: post.md
 date: Last Modified
@@ -61,7 +61,7 @@ I'd like to take a sec to talk about the other, non-villager NPCs though. These 
 
 - Isabelle, who basically runs resident services in the town hall, is less of an optimistic assistant, and more of a sad workaholic who has forgotten how to chill out. 
 
-- Mabel, who was shy, quiet, and dedicated to her work, would open up to the player if they were consistently polite and tried to say hello. But in New Horizons, she became a little rude and self-important, actively telling the player she's busy focussing on her work, and then when she opens up she's a bit of a gossip.
+- Sable, who was shy, quiet, and dedicated to her work, would open up to the player if they were consistently polite and tried to say hello. But in New Horizons, she became a little rude and self-important, actively telling the player she's busy focussing on her work, and then when she opens up she's a bit of a gossip.
 
 - Resetti got cancelled? Look, I get it, he yelled at kids and that's not really cool but like now he's depressed and aimless and it gets me down. 
 
