@@ -1,8 +1,10 @@
 import { DateTime } from "luxon";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 //const { DateTime } = require("luxon");
 
 export default function(eleventyConfig){
     eleventyConfig.addPassthroughCopy("bundle.css");
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
     eleventyConfig.addFilter("postDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj).toISODate({includeOffset: false});
@@ -36,6 +38,7 @@ export default function(eleventyConfig){
 		}
 	});
 };
+
 
 export const config = {
     dir:{
