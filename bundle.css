@@ -51,6 +51,7 @@ body {
     color: var(--text-color);
   	display: flex;
     flex-direction: column;
+    gap:8px;
     min-height: calc(100vh - 45px);
 }
 
@@ -62,9 +63,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header{
-    text-align: center;
-    margin-bottom: 50px;
-    text-decoration: none;
+  text-align: center;
+  margin-bottom: 2em;
+  text-decoration: none;
 }
 
 header a.title {
@@ -79,8 +80,8 @@ header a:hover {
 }
 
 header h1 {
-    font-size: 1.5em;
-  	text-decoration: none;
+  font-size: 1.5em;
+  text-decoration: none;
 	color: var(--heading-color);
 }
 
@@ -89,7 +90,8 @@ time{
 }
 
 nav a {
-    margin-right: 8px;  
+  line-height: 2.5em;
+  margin-right: 8px;
   text-decoration: none;
   color: var(--text-color);
   cursor: pointer;
@@ -109,12 +111,12 @@ nav a:hover{
 }
 
 strong, b {
-    color: var(--heading-color);
+  color: var(--heading-color);
 }
 
 button {
-    margin: 0;
-    cursor: pointer;
+  margin: 0;
+  cursor: pointer;
 }
 
 main {
