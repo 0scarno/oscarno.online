@@ -4,7 +4,7 @@
 }
 ---
 # {{ title }}
-__{{ page.date | postDate }}__
+<p class="postDate"><strong>{{ page.date | postDate }}</strong></p>
 {{ content }}
 
 [↩ back](../)

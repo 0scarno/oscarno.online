@@ -6,24 +6,26 @@
 .home header {
   margin-bottom: 0px;
 }:root {
-    --width: 600px;
+    --width: 650px;
     --font-main: Monaspace, monospace;
     --font-secondary: Monaco, monospace;
     --font-scale: 1em;
-    --background-color: #333;
+    --background-color: #454545;
     --heading-color: #eee;
     --text-color: #ddd;
     --text-color-dim: #bbb;
-    --link-color: #7050B0;
+    --link-bg-color: #353535;
+    --link-hover-color: #7b39f5;
     --visited-color:  #ddd;
     --code-background-color: #282828;
     --code-color: #d9d9d9;
     --blockquote-color: #ccc;
 }
 
+/*
 @media (prefers-color-scheme: dark) {
     :root {
-        --background-color: #333;
+        --background-color: #454545;
         --heading-color: #eee;
         --text-color: #ddd;
         --link-color: #7C54B6;
@@ -32,7 +34,7 @@
         --code-color: #d9d9d9;
         --blockquote-color: #ccc;
     }
-}
+}*/
 
 
 body {
@@ -56,6 +58,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-main);
     color: var(--heading-color);
+    margin-bottom: 0.5em;
 }
 
 header{
@@ -65,13 +68,13 @@ header{
 }
 
 header a.title {
-    font-size: 1.5em;
-  	text-decoration: none;
+  font-size: 1.5em;
+  text-decoration: none;
 	color: var(--heading-color);
 }
 
 header a:hover {
-	color: var(--link-color)
+	color: var(--link-hover-color)
 
 }
 
@@ -88,18 +91,19 @@ time{
 nav a {
     margin-right: 8px;  
   text-decoration: none;
-  color: #ccc;
+  color: var(--text-color);
   cursor: pointer;
   outline-color: transparent;
-  border-radius: 3px;
-  padding-left: 5px;
-  padding-right: 5px;
-  background-color: #505050;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  background-color: var(--link-bg-color);
 }
 
 nav a:hover{
-  background-color:var(--link-color);
-  color: var(--background-color);
+  background-color:var(--link-hover-color);
+  color: var(--text-color);
   text-decoration:none;
   font-style: oblique;
 }
@@ -121,20 +125,21 @@ main {
 
 main a{
   text-decoration: none;
-  color: #ccc;
+  color: var(--text-color);
   cursor: pointer;
   outline-color: transparent;
-  border-radius: 3px;
-  padding-left: 5px;
-  padding-right: 5px;
-  background-color: #505050;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  background-color: var(--link-bg-color);
 }
 
 main a:hover{
-  background-color: var(--link-color);
-  color: var(--background-color);
+  background-color: var(--link-hover-color);
+  color: var(--text-color);
   text-decoration:none;
-  font-style: oblique;
+  font-style:oblique;
 }
 
 table {
@@ -162,6 +167,21 @@ code {
   color: var(--code-color);
 }
 
+main p{
+  text-align: justify;
+  text-justify: auto;
+  padding-left: 1em;
+  margin-top: 0em;
+}
+
+main ul{
+  margin-top: 0.5em;
+}
+
+main .postDate, h1, h2,  h3, h4, h5{
+  padding-left: 0em;
+}
+
 /*highlight{}*/
 
 blockquote {
@@ -180,7 +200,7 @@ footer a{
   color: #ccc;
   cursor: pointer;
   outline-color: transparent;
-  border-radius: 3px;
+  border-radius: 5px;
   padding-left: 5px;
   padding-right: 5px;
   background-color: DimGray;
@@ -207,7 +227,7 @@ footer a:hover{
   padding: 1px 15px;
   background-color: var(--code-background-color);
   color: var(--code-color);
-  border-radius: 4px;
+  border-radius: 5px;
   margin-block-start: 1em;
   margin-block-end: 1em;
   overflow-x: auto;
@@ -222,7 +242,7 @@ footer a:hover{
 
 ul.blog-posts {
   list-style-type: none;
-  padding: unset;
+  padding: auto;
   padding-top: 1em;
 }
 
@@ -236,12 +256,17 @@ ul.blog-posts li a:visited {
   color: var(--visited-color);
 }
 
-/* embeded posts */
+/* embedded posts */
 
+ul.embedded.blog-posts{
+  padding-left: 0%;
+
+}
 
 ul.embedded.blog-posts li {
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
   border-top: 2px dotted;
   border-color: #777;
   padding-top: 1em;
@@ -252,26 +277,28 @@ ul.embedded.blog-posts li {
 
 ul.embedded.blog-posts li a{
 	text-decoration: none;
-  color: #ccc;
+  color: var(--text-color);
   cursor: pointer;
   outline-color: transparent;
-  border-radius: 3px;
-  padding-left: 5px;
-  padding-right: 5px;
-  background-color: DimGray;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  background-color: var(--link-bg-color);
   height: fit-content;
 }
 
 ul.embedded.blog-posts li a:hover{
-  background-color: var(--link-color);
-  color: var(--background-color);
+  background-color: var(--link-hover-color);
+  color: var(--text-color);
   text-decoration:none;
 }
 
 ul.embedded.blog-posts li p {
-  margin-top: 0px;
-  margin-bottom: 0px;
   color: var(--text-color-dim);
+  padding-left: 0%;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 ul.projects {
